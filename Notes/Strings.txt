@@ -1,0 +1,9 @@
+ 	 * Strings are immutable
+         * String alone created without using new keyword
+         * StringBuffer and StringBuilder are created using new keyword
+         * both are mutable.....
+         * StringBuffer and StringBuilder is mutable
+         * StringBuffer is threat safe ...
+         * StringBuffer is synchronized which mean...only one thread ..so thread safe
+         * StringBuider is non synchronized which mean...multiple thread available..so thread is not safe
+        
