@@ -1,0 +1,19 @@
+Java Standard edition ----> Core Java
+Java Enterprise edition ----> Adv Java-->Web App---->Client Server
+EJB(Enterprise Java Beans)-----> Traditional method
+Server -->port (ex:-switch box in home)
+
+Ex:-  File Transfer pananum naa....it have diff port
+      Http-->web site oda info retrieval ku diff port...
+
+like coocker ku thani,..adaptor
+charger ku thani ...adaptor...h/w iruka mari
+
+
+Software layum..diff ports available...antha port is a server which connect to the client
+
+
+Above given are Traditional method.....not used now
+---------------------------------------------------------------------------------------
+
+New one is, Framework is introduced is SpringBoot

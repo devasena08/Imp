@@ -1,0 +1,106 @@
+Recursion
+
+Method calls itself
+
+Namba oru method kula irunthu innoru methoed access / call panirpom
+
+Same mthod la irunthutu athey method ah call panrathu dhn recursion
+
+public class RecursionDemo{
+    public static void main(String[] args) {
+        Rec(1);
+    }
+    public static void Rec(int n){
+        if(n <= 5){ //1 //2 //3 //4 //5 //6<=5 cond fails comes out
+            System.out.println(n); // print akum --> 1 2 3 4 5 
+            n++; //2 3 4 5 6
+            Rec(n);//call akuthu 1Time,2T, 3T, 4T, 5T
+        }
+    }
+}
+               
+	main method 
+    	    |
+	Rec(1)
+	    |
+	sout(1)
+	    |
+	Rec(2)
+	    |
+	sout(2)
+	    |
+	Rec(3)
+	    |
+	sout(3)
+	    |
+	Rec(4)
+	    |
+	sout(4)
+	    |
+	Rec(5)
+	    |
+	sout(5)
+
+
+Difff bet loop and recursion
+
+Loop
+------
+Performance good
+only the particular for loop statements will execute
+
+
+Recursion------>code reusability 
+----------
+
+The method will execute 
+so, we need to create object to execute the method
+and method creates stack frame..
+
+Performance wise its not that much good..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         

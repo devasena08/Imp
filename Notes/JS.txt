@@ -1,0 +1,535 @@
+javascript ====semicolon is mandatory
+	about:blank -->provides blank page
+	//comment
+	javascript code is written within the
+	
+
+	<script></script>
+------------------------------------------------ 	
+Node download pananum...to run js
+	it is a javascript runtime environment
+	in cmd type
+    	   node -v -----version check
+	should be in same path
+	go to terminal...new terminal
+  		node demo.js
+-----------------------------------------------	
+datatype:- 4
+	typeof 10
+	'number'
+	typeof "Hi"
+	'string'
+	typeof true
+	'boolean'
+	let myvariable
+	undefined
+-----------------------------------------------
+Ex:1
+
+let myvariable
+undefined
+myvariable = 10
+10
+typeof myvariable
+'number'
+---------------------------------------------------
+Operators
+
+myvariable +6;
+16
+myvariable +6-2;
+14
+myvariable *2;
+20
+myvariable = 6*3;
+18
+-----------------------------------------------------
+
+Ex:-2
+myvariable="D";
+'D'
+let mynum = 18;
+undefined
+mynum ;
+18
+let mycombo =myvariable+mynum;
+undefined
+mycombo
+'D18'
+-----------------------------------------------------------
+
+Equal(===) and not equal operators(!==)
+
+Equal(===)  ----> is used to check the datatype
+
+
+Ex:-
+
+myvar === String
+false
+mynum ===18;
+true
+mynum  !==20
+true
+
+Equal(==) operater .is used to check normal values
+mynum ===18;
+true
+----------------------------------------------------------------
+Ex:-3
+
+let mybool = mynum ===25;
+undefined
+false
+------------------------------------------------------------------
+Variables
+
+Ex:-
+var a = 10;
+var b = 20;
+console.log(a+b)
+-----------------------------------------------------------------
+3 types:
+Using var
+Using let
+Using const
+-------------------------------------------------------------------
+
+why 3 ?
+let....
+{
+    let a = 10
+}
+console.log(a)
+
+node /tmp/GlZ3hZ98Dh.js
+ERROR!
+/tmp/GlZ3hZ98Dh.js:4
+console.log(a)
+            ^
+
+ReferenceError: a is not defined
+    at Object.<anonymous> (/tmp/GlZ3hZ98Dh.js:4:13)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49
+
+
+Bcz..let is local scope
+
+-----------------------------------------------------------------------------------------------
+
+var....
+{
+    var a = 10
+}
+console.log(a)
+
+node /tmp/VMX3T9kyp1.js
+10
+
+Bcz...Its i global scope
+----------------------------------------------------------------------------------------------------
+
+const....
+
+const a =10;
+a =20;
+console.log(a);
+
+node /tmp/pJ1Q5x7DHa.js
+ERROR!
+/tmp/pJ1Q5x7DHa.js:2
+a =20;
+  ^
+
+TypeError: Assignment to constant variable.
+    at Object.<anonymous> (/tmp/pJ1Q5x7DHa.js:2:3)
+    at Module._compile (node:internal/modules/cjs/loader:1356:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1414:10)
+    at Module.load (node:internal/modules/cjs/loader:1197:32)
+    at Module._load (node:internal/modules/cjs/loader:1013:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:128:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v18.19.1
+
+bcz...it is constant so, once initialized cant be changed
+
+------------------------------------------------------------------------------------
+Javascript keywords
+
+var
+let
+const
+function
+for
+----------------------------------------------------------------------------------------
+Comments same in java
+Single line comments
+	//
+Multi line comments
+
+	/*    */
+
+------------------------------------------------------------------------------------------
+Operators in Js
+
+post increment
+var a =10;
+a++;
+console.log(a);........11
+--------------------------------------------------------------------------
+post decrement
+var a =10;
+a--;
+console.log(a);........9
+--------------------------------------------------------------------------
+var a =10;
+var b =a++;
+console.log(b);......10
+
+--------------------------------------------------------------------------
+var a =10;
+var b =++a;
+console.log(b);........11
+
+--------------------------------------------------------------------------
+Function
+
+function Hi(){
+    console.log("Hii");
+}
+Hi();
+--------------------------------------------------------------------------
+If else
+
+if(true){
+    console.log("Enjoy the rain")
+}else{
+    console.log("Its is sunny")
+}..................................Enjoy the rain
+if If(true) means if block will execute
+
+--------------------------------------------------------------------------
+
+if(false){
+    console.log("Enjoy the rain")
+}else{
+    console.log("Its is sunny")
+}..................................Its is sunny
+else part get executed
+
+--------------------------------------------------------------------------
+
+if(true){
+    console.log("True")
+}...........true is answer
+
+--------------------------------------------------------------------------
+
+if(false){
+    console.log("True")
+}............no output bcz, if is false and no else part to execute
+// if false naa, else part execute aakum
+
+--------------------------------------------------------------------------
+
+if(false){
+    console.log("false")
+}else{
+   console.log("Hii")
+}.................op is Hii, bcz if block is false,
+so, it executes the else block
+
+--------------------------------------------------------------------------
+
+Ex:-
+var rain = true;
+if(rain){
+    console.log("Enj the rain")
+}else{
+    console.log("Its sunny")
+}...............................Enj the rain
+
+--------------------------------------------------------------------------
+
+
+//  logical and &&
+//  logical or ||
+// logical  not  !
+
+--------------------------------------------------------------------------
+
+// Ex:-
+
+console.log(true)......true
+console.log(!true).....false
+
+--------------------------------------------------------------------------
+
+For loop is same as in java
+no need to mention the datatype
+
+for(count =1; count<=10; count++){
+    console.log("Deva")
+}
+
+PS C:\Users\Admin\Documents\Node\Oct_js> node demo7.js
+Deva
+Deva
+Deva
+Deva
+Deva
+Deva
+Deva
+Deva
+Deva
+Deva
+
+--------------------------------------------------------------------------
+
+DOM
+
+Document Object model
+Html will go to browser as document in the form of tree
+Its an interface
+Tree like structure
+Dynamic manupulation of web page contents through js
+
+--------------------------------------------------------------------------
+
+DOM manupulation
+
+DOM manupulation is used to chamnge the html content
+through javascript
+
+paragraph is the html content and scipt is given to manupulate
+
+for manupulation, select the html content through id
+id should be unique
+--------------------------------------------------------------------------
+<p id="one">
+    Hello
+</p>
+<script>
+    var para = document.getElementById("one");
+    console.log(para)
+</script>
+
+Here in the console,...it have only
+<p id="one">Hello</p>
+--------------------------------------------------------------------------
+we want Hello alone so
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one">
+        Hello
+    </p>
+    <script>
+        var para = document.getElementById("one");
+        console.log(para.textContent)
+    </script>
+</body>
+</html>
+
+Hello is the answer in the console
+
+textContent
+getElementById....is the camelcase, use it carefully
+
+--------------------------------------------------------------------------
+
+DOM Manupulation
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one">
+        Hello
+    </p>
+    <script>
+        var para = document.getElementById("one");
+        console.log(para.textContent)
+        para.textContent = "Bye"
+    </script>
+</body>
+</html>
+
+Bye
+
+Hello is changed to Bye
+
+--------------------------------------------------------------------------
+Event and Event Handlers
+
+Going to start with button..
+when i clicl button. it has to change So,
+
+Event is like
+  button clicking
+  moving the mouse ets
+
+Event handlers 
+  on click...it says do somwthing, when i click this 
+  on mouseover
+  on change
+  on mouseout
+  onkeydown
+  onload
+--------------------------------------------------------------------------
+Input Box type
+
+    
+<input  id ="num1">
+    <input id ="num2">
+    <button >Add</button>
+    <p id =" result">Answer</p>
+    <script>
+        //selecting input and p (to store the result) for manupulation
+        var box1 = document.getElementById("num1")
+        var box2 = document.getElementById("num2")
+        var result = document.getElementById("result")
+
+        console.log(box1.textContent)// input box does not bring the textContent
+        // like p tag nad h1 tag
+    </script>
+    
+
+------------------------------------------------------------------------------------------
+
+How to create random number in js
+ var a =  Math.random()
+ console.log(a)
+
+ Math.random()--->0.0 to 0.9 vara..num tharum
+
+Math.floor(6.77)------> 6
+Math.floor(0.99)------->0
+
+Math.random generation by
+
+add + 1 extra...to get 1 to 10 and use floor to remove decimal
+ 
+ var a  = Math.random()
+ var b  = Math.floor(a*10)+1
+ var c --->o/p
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

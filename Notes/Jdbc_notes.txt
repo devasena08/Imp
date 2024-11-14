@@ -1,0 +1,271 @@
+
+JDBC Connection
+
+1)executeQuery
+
+  Connection interface is used
+  All classes and interfaces of jdbc are within the package called sql
+  Connection is not an class....So, it cant be instantiated using new kwyword
+  It is an Interface...
+
+  So,DriverManager class is used
+  DriverManager class has method like getConnection(inside this string is passed) which creates an object
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+ 
+   Statement is an Object
+   Statement is created using con
+
+Statement st = con.createStatement();
+
+   For reading record like
+   String query= "Select * from  table";
+
+   To Execute this query===> use executeQuery and stored in resultantSet bcz, it is going to return the result
+  
+
+Resultset rs = st.executeQuery();
+
+  to execute and for the next next row to print..if available
+
+rs.next();
+
+  Java only know,..int, String..it dont know about the varchar
+  To print the id int , name varchar(3),salary int 
+
+
+sout(rs.getInt(1))------>id colm alone 
+sout(rs.getString(2))------>name colm alone 
+sout(rs.getInt(3))------>salary colm alone 
+
+  Finally...
+
+con.close();
+
+------------------------------------------------------------------------------------------------
+
+Mysql Connector download
+
+  =>os ku Platform independent
+  zip format choose pani...connection is provided..
+
+------------------------------------------------------------------------------------------------
+2a) executeUpdate   (hardquotes)
+   For insertion
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+Statement st = con.createStatement();
+
+   String query= "insert into employee values(1,"Deva",50000)"; is wrg
+   
+   String query= "insert into employee values(1,'Deva',50000)"; is crt
+
+int res = st.executeUpdate(query);  // it is going to return only no of rows affected...
+
+sout(res)
+
+---------------------------------------------------------------------------------------------------
+
+2b) executeUpdate   (using variable )
+   For insertion
+
+
+int id ;
+
+varchar name;
+
+salary int;
+
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+Statement st = con.createStatement();
+
+int res = st.executeUpdate(query);  
+
+sout(res)
+
+---------------------------------------------------------------------------------------------------------
+
+2b) executeUpdate   (using PreparedStatement)
+   For insertion
+
+
+int id ;
+
+varchar name;
+
+salary int;
+
+String query = "insert into employee values(?,?,?);";
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+PreparedStatement pst = con.prepareStatement(query);
+
+??? values update panrom...
+pst.setInt(1,id)
+
+pst.setString(2,name)
+
+pst.setInt(3,id);
+
+
+int res = st.executeUpdate();   // no need to pass the query 
+
+sout(res);
+
+-----------------------------------------------------------------------------------------------------------
+
+3a)
+For Deletion...executeUpdate   (without using PreparedStatement)
+   
+int id =5;
+
+String query = "delete from employee where emp_id = "+ id;
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+Statement st = con.createStatement();
+
+int res = st.executeUpdate(query);   // no need to pass the query 
+
+sout(res);
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+3b)
+For Deletion...executeUpdate   ( using PreparedStatement)
+   
+int id =5;
+
+-------------------------------------------------------------------------------------------------------------
+
+4a)
+
+For Uptade...executeUpdate   (without using PreparedStatement)
+   
+String query = "update employee set salary =75000 where emp_id =1";
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+Statement st = con.createStatement();
+
+int res = st.executeUpdate(query);   // no need to pass the query 
+
+sout(res);
+
+
+------------------------------------------------------------------------------------------------------------------
+
+Types of Statements	
+
+   NormalStatement}
+---------------------------->both used to insert delete..and update
+   PreparedStatement}
+   CallableStatement ===>used to call the store procedure
+
+--------------------------------------------------------------------------
+Create a store produre
+  
+In sql workbench
+delimiter 
+create procedure GetEmp()
+begin
+  Select * from Employee;
+end 
+delimiter;  // store produre is created
+
+GetEmp() // store produre is called
+
+Connection con = DriverManager.getConnection(url, username, password)
+ 
+CallableStatement cst = con.prepareCall("(call GetEmp())");
+
+ResultSet rs  = cst.executeQuery()
+
+while(rs.next()){
+sout(rs.getInt(1))
+sout(rs.getString(2))
+sout(rs.getInt(3))
+}
+
+------------------------------------------------------
+store procedure with parameters
+
+delimiter 
+create procedure GetEmpId(In id int)
+begin
+ select * from employee where emp_id =id
+end
+delimiter
+
+
+Connection con = DriverManager.getConnection(url, username, password)
+int id =3;
+
+//no need to use preparestatement 
+//prepareCall kula ? kudukalam like preparestatement 
+
+CallableStatement cst = con.prepareCall("(call GetEmp(?))")
+
+cst.setInt(1,id)
+
+ResultSet rs  = cst.executeQuery()
+
+while(rs.next()){
+sout(rs.getInt(1))
+sout(rs.getString(2))
+sout(rs.getInt(3))
+}
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

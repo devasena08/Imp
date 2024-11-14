@@ -1,0 +1,319 @@
+1)public class Format {
+    public static void main(String[] args) {
+        InttoStr();
+        InttoStr1();
+        StrtoInt();
+        StrtoInt1();
+        DoubletoStr();
+        DoubletoStr1();
+        StrtoDoble();
+        StrtoDoble1();
+        FloattoStr();
+        FloattoStr1();
+        StrtoFloat();
+        StrtoFloat1();
+    }
+    public static void InttoStr(){
+        int a =10;
+        int b =20;
+        
+        String a1 = Integer.toString(a);
+        String a2 = Integer.toString(b);
+        System.out.println("Int to Str :"+a1+a2);
+    }
+    public static void InttoStr1(){
+        int a =10;
+        int b =20;
+        
+        String a1 = String.valueOf(a);
+        String a2 = String.valueOf(b);
+        System.out.println("Int to Str :"+a1+a2);
+    }
+    public static void StrtoInt(){
+        String a ="10";
+        String b ="20";
+        
+        int a1 = Integer.parseInt(a);
+        int a2 = Integer.parseInt(b);
+        int sum = a1+a2;
+        System.out.println("Str to Int :"+sum);
+    }
+    public static void StrtoInt1(){
+        String a ="10";
+        String b ="20";
+        
+        int a1 = Integer.valueOf(a);
+        int a2 = Integer.valueOf(b);
+        int sum = a1+a2;
+        System.out.println("Str to Int :"+sum);
+    }
+    public static void DoubletoStr(){
+        double a =Math.random();
+        double b =Math.random();
+        
+        String a1 = Double.toString(a);
+        String a2 = Double.toString(b);
+        System.out.println("Double to Str :"+a1+a2);
+    }
+    public static void DoubletoStr1(){
+        double a =Math.random();
+        double b =Math.random();
+        
+        String a1 = String.valueOf(a);
+        String a2 = String.valueOf(b);
+        System.out.println("Double to Str :"+a1+a2);
+    }
+    public static void StrtoDoble(){
+        String a ="10";
+        String b ="20";
+        
+        double a1 = Double.parseDouble(a);
+        double b1 = Double.parseDouble(b);
+        System.out.println("Str to Double :");
+        System.out.println(a1);
+        System.out.println(b1);
+    }
+    public static void StrtoDoble1(){
+        String a ="10";
+        String b ="20";
+        
+        double a1 = Double.valueOf(a);
+        double b1 = Double.valueOf(b);
+        System.out.println("Str to Double :");
+        System.out.println(a1);
+        System.out.println(b1);
+    }
+    public static void FloattoStr(){
+        float a =5f;
+        float b =4f;
+        
+        String a1 = Float.toString(a);
+        String a2 = Float.toString(b);
+        System.out.println("Float to Str  :"+a1+a2);
+    }
+    public static void FloattoStr1(){
+        float a =5f;
+        float b =4f;
+        
+        String a1 = String.valueOf(a);
+        String a2 = String.valueOf(b);
+        System.out.println("Float to Str  :"+a1+a2);
+    }
+    public static void StrtoFloat(){
+        String a ="10";
+        String b ="20";
+        
+        float a1 = Float.parseFloat(a);
+        float b1 = Float.parseFloat(b);
+        System.out.println("Str to Float  :");
+        System.out.println(a1);
+        System.out.println(b1);
+    }
+    public static void StrtoFloat1(){
+        String a ="10";
+        String b ="20";
+        
+        float a1 = Float.valueOf(a);
+        float b1 = Float.valueOf(b);
+        System.out.println("Str to Float  :");
+        System.out.println(a1);
+        System.out.println(b1);
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------
+2)  A class can have multiple static methods
+
+static keyword in methods:-
+  
+   Static keyword use panra apo..no need to create object
+why this?
+   object create panra memo save aakum
+   main method is static..bcz,..main method is called from compiler which is present outside
+   that dont want to create any obj..  
+
+static keyword in variable/fields:-
+
+  if value is not changed from object to object...then it is better to use static keyword
+  in the case of instance variable..seperate copy of objects will be created
+  static variable is created at the class level at the time of class loading and destroyed at the time of class unloading
+
+
+General..
+
+  static method is created at the class level
+  static method is also called as class methods
+  for normal methods..each copy of object will be created
+  for static methods...only one object is referenced..so,it provides efficient memory management
+  we can directly access the static method using classs name Ex;- className.staticmethodName();
+  Main method in java is static..so that jvm can access without creating object...
+
+---------------------------------------------------------------------------------------------------------------------------
+3) 
+
+Writing a new static method in the subclass that has the same signature in super class are called ...................process
+
+
+Ans :- Method Hiding
+
+Method Overloading
+   same method name
+   diff no of parameters..or datatype
+   diff return type
+   happens at complile time polymorphism
+
+
+Method Overriding
+   same method name
+   same parameters
+   same return type
+   happens at run time polymorphism
+   happens b/w 2 classes
+   subclass method have method implementation which differ from super class method implementation
+
+--------------------------------------------------------------------------------------------------------------------------
+
+4) 
+
+----------Operator is used for type checking
+instanceof operator
+
+---------------------------------------------------------------------------------------------------------------------------
+
+5)
+
+public class StrBuild {
+    public static void main(String[] args) {
+        StringBuilder sb1 = new StringBuilder("Scripting");
+        sb1.insert(2,"Java").delete(7,9);
+        //start = 7 end = n-1 9-1 =8   ...so del 7 and 8
+        System.out.println(sb1.toString());
+    }
+}
+
+o/p:- Scjavarting
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+6)
+
+------------methods can have implementation in interface
+
+Only abstact method 
+
+
+
+-------------------------------------------------------------------------------------------------------
+
+7)
+
+------------------is wrapper type of int
+
+INTEGER
+
+-------------------------------------------------------------------------------------------------------
+8)
+
+Redeclaring the default method will make the method-----------------
+
+abstract
+
+------------------------------------------------------------------------------------------------------
+9)
+You can use a  constructor called---------------------to pass an arbitary number of values to a method
+
+
+var args
+
+-------------------------------------------------------------------------------------------------------------------
+10)---------------access modifier makes a member available only to classes within the same package and subclasses
+
+protected
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+11)-------method is callled by the garbage collector of an object when garbage collection determines 
+that there are no more references to the object
+
+Finalize----->is used to clean up object before an obj is destroyed by the garbage collector 
+
+
+Diff bet final finally and finalize
+
+--------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

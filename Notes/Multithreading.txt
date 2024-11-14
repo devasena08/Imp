@@ -1,0 +1,437 @@
+
+Multithreading
+
+Concurrency--->sys can do multiple wrk at a time
+----------> it is achieved by multithreading
+
+It is acheived in java using....the package called java.util.cuncurrent 
+
+two imp things:-
+
+1)process 
+2)thread
+
+
+Multiprocessing
+	Multitasking-->Doing many task at single time using diff process
+	Multiple process
+	ex:- JVM is a single process
+	Inside one process, we need to acheive concurrency,...is multi threading ie
+	Doing many tasks at single time inside a single process
+			
+
+Multithreading----->concurrency is mostly concerned with threads
+
+Threads are called light weight 
+
+So, Multithreading :- Light weight
+		   :- Multithreading is  a subset of multi processing
+
+
+		  Multithreading
+	 	------------------	
+
+	It is a feature of java
+	Every application/ ie program has atleast one threat
+	Ex:- Main method is a main threat
+	Main method has the ability to create additiinal threads..
+	
+	Real time example...is when multiple userslog in akurathu,..
+	EX- video games, graphics, animations
+
+	If web servers naa..multiple users login akurathu,
+
+
+Thread is a Class
+it has Objects
+
+
+Single thread means doing only one task(Job)
+
+Do do this Job/task..we need to have object so..we have class java.lang.Thread
+
+Multithreading is acheived by
+
+1)By extending the thread classes(subclass)
+2)By implementing runnable interface
+
+We are goimg to discuss 2 methods in thread class
+1)run
+2)start
+
+public void run()
+
+public void start()
+
+
+method having same signature but diff definition is called method overriding
+
+why i am saying ere, bcz
+thread class already has run and start method
+
+now, we are going to create a child class
+and there,,method override pana porom...ie, run method having same name,,..but diff def
+
+will see that
+
+public class Multithread {
+    public static void main(String[] args) {
+        Childcls m = new Childcls(); // m is a child class obj
+        // which can access all the parent cls(thread) method
+        m.run();
+        
+    }
+}
+class Childcls extends Thread{
+    public void run(){ //thread class have run and start method
+        //both are non static methods....so, create obj to access it
+        for(int i=1; i<=10; i++){
+            System.out.println("Child Thread "+i);
+        }
+    }
+}
+
+public class Multithread1 {
+    public static void main(String[] args) {
+        Childcls m = new Childcls(); // m is a child class obj
+        // which can access all the parent cls(thread) method
+        m.run();
+       
+
+ m.start();
+        //entha obj vachu access panromo...antha class kula ula def dhn call panum
+        //ex:- child class la namba ipo object create panirkmom,....and we hve only
+        // run method...but we are calling start methid using child class obj
+        //satrt method is in parent cls....but it will return the child class output
+        //bcz,. we used child class obj to access it 
+    }
+}
+class Childcls extends Thread{
+    public void run(){ //thread class have run and start method
+        //both are non static methods....so, create obj to access it
+        for(int i=1; i<=10; i++){
+            System.out.println("Child Thread "+i);
+        }
+    }
+}
+
+
+Execution
+
+
+1)Sequential execution
+2)Parallel execution
+
+1)Sequential execution
+public class Multithread2 {
+    public static void main(String[] args) {
+        ChildThd2 ct = new ChildThd2();
+        ct.run();
+        for(int i=1; i<=5; i++){
+            System.out.println("MainThread "+i);
+        }
+    }
+}
+class ChildThd2 extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.println("ChildThread "+i);
+        }
+    }
+}
+
+/*
+ * this is sequential execution
+ * single stack or single thread
+ * bcz,...ore thread dhn main method ah call panuthu,...
+   athula iruka run ah call panuthu...thn main la iruka for ah call panuthu
+ */
+
+start()-->means starting a new thread
+
+
+
+public class Multithread3 {
+    public static void main(String[] args) {
+        ChildThd3 ct = new ChildThd3();
+        //ct.run(); run ah access panama...
+        ct.start(); //starts a new thread-->new thread craete akum
+        for(int i=1; i<=5; i++){
+            System.out.println("MainThread "+i);
+        }
+    }
+}
+class ChildThd3 extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.println("ChildThread "+i);
+        }
+    }
+}
+
+/*
+ * this is parallel execution
+ * 
+ * 
+ChildThread 1
+MainThread 1
+ChildThread 2
+ChildThread 3
+MainThread 2
+ChildThread 4
+ChildThread 5
+MainThread 3
+MainThread 4
+MainThread 5
+ * 
+ * 
+ * epdi mathi mathi print panum..
+ */
+
+
+case1 :-
+start --->creating/strting  a new thread---->parallel ah oru execution ah start panitom
+run ---->single thread
+
+ore thread ah 2 time start pana koodathu
+start panom na...
+
+illegalThreadstate Exception varum
+
+Thread has states
+Lifecycle of thread
+
+new thread(object ah create panvom for thread class ku)
+			|
+		    new state
+			|start()--->obj.start()
+		    runnable state
+			|run()--->obj.run()
+		    running state
+			|
+		    dead/terminate state
+
+		
+
+running and runnable
+
+I am doing--->panren
+It is doable---->panlam/pana mudiyum
+
+Obj create akurathu run time la ...associated with jvm...
+jvm is platform dep....depends on the os and processor
+
+jvm kita namba kudurathu vanthu runnable
+
+when jvm kum nu time os /processor time allocate panutho..apo running ah marum
+
+oru thread ah..
+
+developer --->thread ah runnable ku move panrom
+jvm------> thread ah running ku move pannum
+
+jvm has a person ...ie software to move from
+runnable to running
+
+by Thread Scheduler
+
+
+multiple threads run akum
+
+which thread has to move from runnable to running by Thread Scheduler
+
+
+eX- road la irula traffic police dhn jvm( kula iruka Thread Scheduler)
+anga iruka bikes la threads..
+signal 
+athulathread has to move from runnable to running by Thread Scheduler
+
+
+ipo oru vip scort vanthu
+priority marum
+
+so, we can give high /low priority to threads..if need
+setPriority(1 to 10)
+default num is 5
+
+
+Thread scheduler
+
+1)setPriority
+2)move from runnable to running by Thread Scheduler
+
+
+setPriority--->decides ethu runnable to running kondu polam based on priorities
+
+public class Multithread6 {
+    public static void main(String[] args) {
+        ChildThd6 ct = new ChildThd6(); //thread kaana obj ah create panirkom
+        System.out.println(ct.getState());//new state la irkum ipo...will check it
+        ct.start();
+        System.out.println(ct.getState());
+        ct.setPriority(1);//naa main thread ku prio set panirken..so it will exe first
+        for(int i=1; i<=5; i++){
+            System.out.println("MainThread "+i);
+        }
+        System.out.println(ct.getState());
+    }
+}
+class ChildThd6 extends Thread{
+    public void run(){
+        for(int i=1; i<=5; i++){
+            System.out.println("ChildThread "+i);
+        }
+    }
+}
+
+ 
+
+
+apovum output marum...bcz, Os is also multithreading os
+
+athu first processor kita irunthu time jvm ku allocate pananum...athula intha main thread ku prio set pananum
+
+
+int 1 to 10
+ilati exception varum
+
+illegal arugemt exception varum
+
+getState
+getName
+setName
+setPriority
+
+
+Methods in thread
+
+run------>single thread..it is a sequential execution //non static methods
+start---->multiple thread...it is parallel execution //non static methods
+yield----->running state la nadakum //static method....so,Thread cls ah vachu access panaum..Thread.yield();
+join----->one thread waiting for another thread , until it executes..like dependency mari
+sleep
+wait
+
+
+thread --->oru process execute akurathu..dhn thread 
+
+
+
+
+yield means-->giving
+
+5 threads are running means....
+
+athu la oru thread .ie 
+current ah execute akura thread giving chances to other thread...
+which have same priority
+
+yield pana aprm...
+running la irunthu..runnable ku poidum
+and antha thread ku high priority lam illa...normal dhn
+
+Join:
+
+Depedency for one thread...
+
+ex:-
+2 paralel  diff action ...and it has chances
+case 1 : movie downloadd pana...internet venum-->kandipa thread kaka wait pananum
+case 2 : exam hall ah..question kondu vara office assistant kaka...teacher wait panvaga
+---->qp varati..mam ae poi vankitu vanthurvaka/others will go...wait panvaka only certain time peroid
+
+
+
+
+
+wait/sleep
+
+ Thread.sleep nu kudutha..
+sleep ku poidum...athu namba disturb panitom
+
+
+sleep ku pona...aprm agn goes to runnable state
+
+
+
+sleep/wait state la iruka thread ah interrupt panrathu dhn interrupt
+
+
+Thread ah interept panra methods
+join
+yield
+sleep 
+interrupt 
+
+
+
+
+
+
+
+
+
+keyword:-
+synchronized
+
+	ITC-->Inter Thread Communication
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

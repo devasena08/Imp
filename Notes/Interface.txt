@@ -1,0 +1,108 @@
+/*
+     * Interface is a contract
+     * it acheives 100% abstraction
+     * ie all the methods are abstract in default...no need to mention actract keyword
+     * no methods will have method declaration only defintion will be there
+     * java does not support multiple inheritance...but interface indirectly support multiple inheritance
+     * u cant create object for interface
+     * all instance methods except the default and static methods have only method declaration
+     * default methods can be overridden
+     * static methods can be accessed using interface name
+     */
+
+
+public class Ps6 {
+    public static void main(String[] args) {
+        Animal c = new Cow();
+        Animal g = new Goat();
+        c.Sound();
+        c.Eat();
+        c.Sleep();
+        c.child();
+        g.Sound();
+        g.Eat();
+        g.Sleep();
+        g.child();
+    }
+}
+interface Animal{
+    void Sound();
+    void Eat();
+    void Sleep();
+    void child();
+}
+class Cow implements Animal{
+    public void Sound(){
+        System.out.println(" Cow sounds like .....Maaa");
+    }
+
+    @Override
+    public void Eat() {
+        System.out.println("Cow is Carnivore...");
+    }
+
+    @Override
+    public void Sleep() {
+        System.out.println("Zzzzz");
+    }
+
+    @Override
+    public void child() {
+        System.out.println("half is the Child of Cow...");
+    }
+}
+class Goat implements Animal{
+    public void Sound(){
+        System.out.println(" goat sounds like .....Maaaee");
+    }
+
+    @Override
+    public void Eat() {
+        System.out.println("Gaot is Carnivore...");
+    }
+
+    @Override
+    public void Sleep() {
+        System.out.println("Zzzzz");
+    }
+
+    @Override
+    public void child() {
+        System.out.println("kid or lamp is the Child of Cow...");
+    }
+}
+
+
+
+the above 
+
+ void Sound();
+    void Eat();
+    void Sleep();
+    void child(); all these methods  are overriden
+
+and if it have default method ,..then it can also be override
+except the static methods...bcz,static methods cant be overriden
+bcz, it is class lvl method 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
