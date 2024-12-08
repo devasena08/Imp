@@ -1,0 +1,207 @@
+Efficient series
+In general:-
+   Hashamap-->countfrequency ku use panvom
+   Set------->num iruka ilaya paka use panvom
+
+-------------------------------------------------------------------------
+Ef:1
+
+Rotate string
+s = abcde g=cdeab iruka paka....add s+s=abcdeabcde -->f
+f.contains(g)---iruka nu paklam
+
+--------------------------------------------------------------------------
+
+Ef: 2
+Add digits
+1  2  3  4  5  6  7  8  9        |
++9
+10 11 12 13 14 15 16 17 18       |
++9
+19 20 21 22 23 24 25 26 27       |
++9
+28 29 30 31                      V
+
+1-->10-->19-------->ans 1 (1+0=1, 1+9=10-->1+0=1)
+2-->11-->20-------->ans 2 (1+1=2, 2+0=2)
+3-->12-->21-------->ans 3 (1+2=3, 2+1=3)
+
+
+ipo...inth4 num lam epdi single digit akalam nu pakrom
+
+ex:-123 = 1+2+3=6
+123%9 =6
+159=1+5+9=15=1+5=6
+159%9 =6
+
+----------------------------------------------------------------------
+
+Ef : 3
+Power of 4
+
+4 has 2 -->4 = 4  power 1   =2*2=4   ------------2 power 2
+           16= 4*4          =2*2*2*2=16----------2 power 4  
+	   64= 4*4*4        =2*2*2*2*2*2=64------2 power 6
+
+ipo 4 power x means..ie 2 power 2x ah irkum
+
+32 bits integer--->0 to 31 bits
+ie 2 power 0 to 2 power 32 vara pokum
+2 power 32 calculate pana mudiayathu in javaa...
+
+2 pow 31 -1===>exist in java...ie 2 pow 30
+
+
+pow of 2
+
+1 2  4  8  16  32  64
+
+pow of 4
+
+1 4 16 64 256 1024------>last digit 4/6
+
+finally...a given num is a...pow of 2 ah irunthu..athoda last digit vanthu 4/6 ah iruntha..then..ie pow of four
+
+question is..pow of two ah nu epdi pakrathu...given num is x
+
+1) x% 2 pow 30 ==0 ah iruntha ie pow of 2
+2) pow of 4 ku..last digit vanthu 4/6 ah irkanum 
+x%10 = 4/6
+
+------------------------------------------------------------------------------
+
+Ef :4
+Power of 3
+
+3 9 27 51 153
+
+------------------------------------------------------------------------------
+
+Ef : 5
+Alternative digits
+
+5 -->101 -->true
+7 -->111 -->false
+
+right shift n>>1--->
+ex:- 101010>>1
+     010101
+
+Xor -->
+or means..any one true
+xor means onu mtm dhn true ah irukanum..ipo 1 1 nu rendu true iruntha,...false akidum  
+0 0--->0
+0 1--->1
+1 0--->1
+1 1--->0
+
+
+
+
+
+num ^ (num >> 1)
+
+ex1 : num =10 has alternative 0 and 1 ie crt has all one as ans
+
+(10 >> 1)----> 1010
+               0101
+
+1010 ^ 0101
+
+1 ^ 0---->1
+0   1---->1
+1   0---->1
+0   1---->1  +1===>add pana  10000
+
+01111
+10000
+------------add pananum
+00000--->all as zero
+
+ex 2:- num =9 has no alternative 0 and 1 ie wrg has no all one as ans
+
+9-->  1001
+      0100
+----------------
+Xor=  1101
+
+
+1)right shift panitu 1 time
+2)xor panitu,...antha vara ans ah..+1 pananum
+3)1 pana idhum and xor yum and pana-->zero vantha
+alternative digits exist
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
