@@ -1,0 +1,20 @@
+View
+
+View vanthu..ipo like redundant ah ...we have to write complex query from table ...Naa
+Then attu view ah...ie virtue table ah create panikalam
+Create view vi_name
+As
+Select id, name from employee
+Select * from vi_name
+Ithu change pananum naa 
+
+Use..
+
+Create or replace view
+ vi_name
+As
+Select id from employee
+Name delete paniyachu
+Update and insertion is not possible
+Drop view vi_name
+Drop akidum

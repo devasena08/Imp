@@ -1,0 +1,74 @@
+Index
+
+  Index naa...fast retrieval 
+  Ipo 1000 records iruku naa...
+  Athu retrieve pani pakrathu kastam....so, book la iruka index mari....oru index create panitom naa....ec ahh access panlam
+  Chuma... default ah ena index irku nu papom
+
+ Show index from employee;
+ Ithula .... Namba primary key, foreign key..and unique 
+
+Antha table ah iruntha
+Primary key 
+Foreign key 
+Unique...
+
+Elame index ah ans varum
+Index col ku mtm thaniya ..oru table maintain panum...in order and uses b tree....apo dhn fast ah retrieve pana mudiyum
+B tree la epdi search nadakum. Na...
+If the tree oda order vanthu 3 or greater than 3 means....
+
+K nary search panum 
+
+Ipo kamina binary search panum...in T(logn) time ila...
+B tree is a self balancing tree  data structure
+Binary tree  must have at most 2 child per node
+B tree can have multiple values
+Athu ascending order la... sort pani... table maintain panum...
+So, that retrieve easy ah irkum...
+Create index name 
+On table (colname)
+Using alter we can create index
+Same way descending order layum index create panlam
+Insertion and updation takes time in index ..
+Table ah Change pana..
+Index layum pananum
+
+
+Create index
+  
+  create index indexname
+  on tablename(colname)
+
+Show index
+
+   show index from tablename
+   
+using alter we can add/drop indx
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
