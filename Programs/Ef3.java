@@ -8,7 +8,7 @@ public class Ef3{
         int n = read.nextInt();
         System.out.println(method(n));
         read.close();
-    }
+    }//should be power of 2 and lat digit should be.either 4 or 6
     public static boolean method(int n ){
         return Math.pow(2, 30) % n == 0 && ((n % 10 ==4) || (n % 10 ==6));
     }
