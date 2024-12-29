@@ -7,7 +7,7 @@ public class Ef6 {
     @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
-        System.out.println("Enter : "); //10
+        System.out.println("Enter : "); //10-->1010
         int n = read.nextInt();
         System.out.println(method(n));
         read.close();
@@ -21,3 +21,9 @@ public class Ef6 {
         return (xor & (xor + 1)) == 0;
     }
 }
+/*
+1)1 time right shift
+2) do xor with n and store as = xor
+3) xor + 1 = ans la strore panikonga
+4)xor && ans = 0 ah...irunta, alternative digits irku nu meaning
+*/
