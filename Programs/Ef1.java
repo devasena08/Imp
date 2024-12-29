@@ -6,7 +6,7 @@ public class Ef1 {
         System.out.println(Method(s,c));
     }
     public static  boolean Method(String s, String c){
-        String ans = s+s;
+        String ans = s+s;//ab(cdeab)cde
         return ans.contains(c); //true irkum default ah..return akati false
     }
 }
