@@ -1,8 +1,9 @@
 import java.util.*;
 public class Hr2 {
     public static void main(String[] args){
-        //diff pair count
+        //two difference ===> pair count
         int[] arr = {5,7,2};
+        //array element minus pannra apo,..5 varutha paknum,..ethunai count varutho.return the count
         int target = 5;
         Set<Integer> set = new HashSet<>();
         int count=0;
@@ -24,4 +25,7 @@ public class Hr2 {
 
     {1,5,3,4,2};
     int target = 2;
+
+
+    1)set la podurom   2)arr lirunthu targrt + panitu set la iruka pakrom...iruntha...count increment panrom...
  */
