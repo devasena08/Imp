@@ -35,6 +35,10 @@ i=4, 4<5 & digit(0)
 sb(10)-->1++-->5
 i=5, 5<5 .no it coms out
 
+ *Mistakess i made..
+while(i < str.length() && Character.isDigit(i)----> str.charAt(i)
+System.out.println(sb); //tostring poten  
+int ans = Integer.parseInt(s.toString());   ----.tostring  podala    
 
 
 so..in general...
