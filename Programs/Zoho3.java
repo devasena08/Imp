@@ -1,6 +1,6 @@
 public class Zoho3 {
     public static void main(String[] args){
-        String str ="a3b10";
+        String str ="a3b10";//01234
         StringBuilder res = new StringBuilder();
         
         int i = 0;
@@ -21,3 +21,24 @@ public class Zoho3 {
         System.out.println(res);
     }
 }
+/*
+a3b10--->aaabbbbbbbbbb
+using two sb
+i=0, ch =a, i+=--->1
+i=1, 1<5 & 3-->sb(3), i++---.2
+i=2, 2<5 & b is not digit-->so omes out---.>
+ans = sb(3) str to int --.a ns appeds aaain res
+i=2<5 ch =b i++-->3
+i=3, 3<5 && digit -->1
+sb(1)--->1++--->i=4
+i=4, 4<5 & digit(0)
+sb(10)-->1++-->5
+i=5, 5<5 .no it coms out
+
+
+
+so..in general...
+2 while cond
+2 sb need
+
+*/
