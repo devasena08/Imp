@@ -9,5 +9,6 @@ public class Notes_Interface {
      * all instance methods except the default and static methods have only method declaration
      * all methos can be overridden
      * static methods can be accessed using interface name
-     */
+        Static methods cant be overridden ...it is called method hiding
+     */        
 }
