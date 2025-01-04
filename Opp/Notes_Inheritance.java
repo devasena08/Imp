@@ -7,5 +7,10 @@ public class Notes_Inheritance {
      * idhn explicit calling of cons..but athu first line la irukanum
      * explict call of cons in diff classs using super
      * explict call of cons in same classs using this
+
+     Code Reusability: The code written in the Superclass is common to all subclasses. 
+     Child classes can directly use the parent class code.
+     Method Overriding: Method Overriding is achievable only through Inheritance. 
+     It is one of the ways by which Java achieves Run Time Polymorphism.
      */
 }
