@@ -33,7 +33,7 @@ public class Notes{
      * 
      *  No primitive datatypee is allowed in collections
      * 
-     * 
+     * Set, List, Map, Queue are the interfaces
      *      
      * 
      * 
