@@ -17,6 +17,6 @@ public class ArrayList1 {
         al1.removeLast();
         System.out.println(al1);
         
-        
+        /* add, remove, addfirst,removefirst, addlast, removelast */
     }
 }
