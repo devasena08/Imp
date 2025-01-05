@@ -1,11 +1,11 @@
 public class Notes_ArrayList{
     /*
-     * ArrayList is the class which is the used to implement the interface
+     * ArrayList is the class which is  used to implement the interface called list
      * class means it should come under package, it also has constructor ie used 
      * to create object , method,.etc
      * Arraylist is comb of both array and list
      * it is resizable....and length is not used here,...instead size() is used
-     * Ds:- Dynamis Array
+     * Ds:- Dynamic Array
      * 
      * Util package
      * 
