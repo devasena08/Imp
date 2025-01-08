@@ -1,5 +1,6 @@
 public class Fern6 {
     public static void main(String[] args) {
+        //mat addition
         int[][] mat1 = {{1,2},{3,4}};
         int[][] mat2 = {{1,2},{3,4}};
         int n = mat1.length;
