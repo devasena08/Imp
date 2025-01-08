@@ -15,7 +15,7 @@ public class Fern5 {
     }
 }
 /*
-Bc...it 3*2
+Bc...it 2*3 matrix
 For i = 0 (first row):
 j = 0 → Process arr[0][0] (value 1).
 j = 1 → Process arr[0][1] (value 2).
