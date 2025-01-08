@@ -2,6 +2,7 @@ import java.util.*;
 
 public class Fern3 {
     public static void main(String[] args) {
+        //Binary Search
         int[] arr ={3,5,7,9,1,2,4};
         int target = 5;
         Arrays.sort(arr); //1,2,3,4,5,7,9
