@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Fern20 {
-    
+    //prime number
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
         System.out.println("Enter the number: ");
