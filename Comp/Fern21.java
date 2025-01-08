@@ -1,5 +1,6 @@
 public class Fern21 {
     public static void main(String[] args) {
+        //sec max
         int[] arr ={1,7,3,5,9,2};
         int max = Integer.MIN_VALUE;
         int sec = Integer.MIN_VALUE;
