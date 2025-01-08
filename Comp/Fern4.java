@@ -1,5 +1,6 @@
 public class Fern4 {
     public static void main(String[] args) {
+        //transpose of a matrix
         int[][] arr = {{1,2,3},
                       {4,5,6},
                       {7,8,9}};
@@ -8,7 +9,7 @@ public class Fern4 {
 
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr.length; j++){
-                tr[i][j] = arr[j][i];
+                tr[i][j] = arr[j][i];//00 00,01 10--->ij ji
             }
         }
         for(int i=0; i<tr.length; i++){
